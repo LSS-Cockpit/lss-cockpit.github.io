@@ -14,7 +14,7 @@
   bottom: 16px;
   left: 0;
 }
-.card .card-body{ display: table; width: 100%; padding: 12px; }
+.card .card-body{ display: table; width: 19%; padding: 12px; }
 .card .card-header{ border-radius: 6px 6px 0 0; padding: 8px; }
 .card .card-footer{ border-radius: 0 0 6px 6px; padding: 8px; }
 .card .card-left{ position: relative; float: left; padding: 0 0 8px 0; }
