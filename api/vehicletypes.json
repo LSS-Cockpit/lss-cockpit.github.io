@@ -1,3 +1,4 @@
+[
   {
     "id": 0,
     "name": "LF 20",
@@ -2447,8 +2448,12 @@
     "id": 94,
     "name": "Diensthundeführerkraftwagen",
     "short_name": "DHuFüKw",
-    "class": ["k9"],
-    "class_alias": ["Polizeihund"],
+    "class": [
+      "k9"
+    ],
+    "class_alias": [
+      "Polizeihund"
+    ],
     "cost": 15000,
     "personal": {
       "min": 1,
@@ -2466,3 +2471,4 @@
       "k9": 1
     }
   }
+]
