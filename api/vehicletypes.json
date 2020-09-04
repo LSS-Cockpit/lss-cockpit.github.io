@@ -1,4 +1,4 @@
-  [{
+[  {
     "id": 0,
     "name": "LF 20",
     "short_name": "LF 20",
@@ -23,8 +23,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 1,
     "name": "LF 10",
     "short_name": "LF 10",
@@ -49,8 +49,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 2,
     "name": "Drehleiter",
     "short_name": "DLK 23",
@@ -73,8 +73,8 @@
     "prerequisites": {
       "fire_stations": 3
     }
-  }],
-  [{
+  },
+  {
     "id": 3,
     "name": "Einsatzleitwagen 1",
     "short_name": "ELW 1",
@@ -97,8 +97,8 @@
     "prerequisites": {
       "fire_stations": 6
     }
-  }],
-  [{
+  },
+  {
     "id": 4,
     "name": "Rüstwagen",
     "short_name": "RW",
@@ -121,8 +121,8 @@
     "prerequisites": {
       "fire_stations": 4
     }
-  }],
-  [{
+  },
+  {
     "id": 5,
     "name": "GW-Atemschutz",
     "short_name": "GW-A",
@@ -145,8 +145,8 @@
     "prerequisites": {
       "fire_stations": 5
     }
-  }],
-  [{
+  },
+  {
     "id": 6,
     "name": "LF 8/6",
     "short_name": "LF 8/6",
@@ -171,8 +171,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 7,
     "name": "LF 20/16",
     "short_name": "LF 20/16",
@@ -197,8 +197,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 8,
     "name": "LF 10/6",
     "short_name": "LF 10/6",
@@ -223,8 +223,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 9,
     "name": "LF 16-TS",
     "short_name": "LF 16-TS",
@@ -247,8 +247,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 10,
     "name": "GW-Öl",
     "short_name": "GW-Öl",
@@ -271,8 +271,8 @@
     "prerequisites": {
       "fire_stations": 6
     }
-  }],
-  [{
+  },
+  {
     "id": 11,
     "name": "GW-L2-Wasser",
     "short_name": "GW-L2-W",
@@ -297,8 +297,8 @@
     "prerequisites": {
       "fire_stations": 7
     }
-  }],
-  [{
+  },
+  {
     "id": 12,
     "name": "GW-Messtechnik",
     "short_name": "GW-Mess",
@@ -323,8 +323,8 @@
     "prerequisites": {
       "fire_stations": 10
     }
-  }],
-  [{
+  },
+  {
     "id": 13,
     "name": "SW 1000",
     "short_name": "SW 1000",
@@ -349,8 +349,8 @@
     "prerequisites": {
       "fire_stations": 7
     }
-  }],
-  [{
+  },
+  {
     "id": 14,
     "name": "SW 2000",
     "short_name": "SW 2000",
@@ -375,8 +375,8 @@
     "prerequisites": {
       "fire_stations": 7
     }
-  }],
-  [{
+  },
+  {
     "id": 15,
     "name": "SW 2000-Tr",
     "short_name": "SW 2000-Tr",
@@ -401,8 +401,8 @@
     "prerequisites": {
       "fire_stations": 7
     }
-  }],
-  [{
+  },
+  {
     "id": 16,
     "name": "SW KatS",
     "short_name": "SW KatS",
@@ -427,8 +427,8 @@
     "prerequisites": {
       "fire_stations": 7
     }
-  }],
-  [{
+  },
+  {
     "id": 17,
     "name": "TLF 2000",
     "short_name": "TLF 2000",
@@ -453,8 +453,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 18,
     "name": "TLF 3000",
     "short_name": "TLF 3000",
@@ -479,8 +479,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 19,
     "name": "TLF 8/8",
     "short_name": "TLF 8/8",
@@ -505,8 +505,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 20,
     "name": "TLF 8/18",
     "short_name": "TLF 8/18",
@@ -531,8 +531,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 21,
     "name": "TLF 16/24-Tr",
     "short_name": "TLF 16/24-Tr",
@@ -557,8 +557,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 22,
     "name": "TLF 16/25",
     "short_name": "TLF 16/25",
@@ -583,8 +583,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 23,
     "name": "TLF 16/45",
     "short_name": "TLF 16/45",
@@ -609,8 +609,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 24,
     "name": "TLF 20/40",
     "short_name": "TLF 20/40",
@@ -635,8 +635,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 25,
     "name": "TLF 20/40-SL",
     "short_name": "TLF 20/40-SL",
@@ -661,8 +661,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 26,
     "name": "TLF 16",
     "short_name": "TLF 16",
@@ -687,8 +687,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 27,
     "name": "GW-Gefahrgut",
     "short_name": "GW-G",
@@ -713,8 +713,8 @@
     "prerequisites": {
       "fire_stations": 11
     }
-  }],
-  [{
+  },
+  {
     "id": 28,
     "name": "Rettungswagen",
     "short_name": "RTW",
@@ -743,8 +743,8 @@
     "prerequisites": {
       "rescue_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 29,
     "name": "Notarzteinsatzfahrzeug",
     "short_name": "NEF",
@@ -771,8 +771,8 @@
     "prerequisites": {
       "rescue_stations": 3
     }
-  }],
-  [{
+  },
+  {
     "id": 30,
     "name": "HLF 20",
     "short_name": "HLF 20",
@@ -800,8 +800,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 31,
     "name": "Rettungshubschrauber",
     "short_name": "RTH",
@@ -835,8 +835,8 @@
     "prerequisites": {
       "rescue_stations": 3
     }
-  }],
-  [{
+  },
+  {
     "id": 32,
     "name": "Funkstreifenwagen",
     "short_name": "FuStW",
@@ -861,8 +861,8 @@
     "prerequisites": {
       "police_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 33,
     "name": "GW-Höhenrettung",
     "short_name": "GW-H",
@@ -887,8 +887,8 @@
     "prerequisites": {
       "fire_stations": 12
     }
-  }],
-  [{
+  },
+  {
     "id": 34,
     "name": "Einsatzleitwagen 2",
     "short_name": "ELW 2",
@@ -915,8 +915,8 @@
     "prerequisites": {
       "fire_stations": 13
     }
-  }],
-  [{
+  },
+  {
     "id": 35,
     "name": "Leichter Befehlskraftwagen",
     "short_name": "leBefKw",
@@ -940,8 +940,8 @@
     "prerequisites": {
       "bereitschaftspolizei": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 36,
     "name": "Mannschaftstransport-Wagen",
     "short_name": "MTW",
@@ -960,8 +960,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 37,
     "name": "TSF-W",
     "short_name": "TSF-W",
@@ -986,8 +986,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 38,
     "name": "Krankentransportwagen",
     "short_name": "KTW",
@@ -1010,8 +1010,8 @@
     "prerequisites": {
       "rescue_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 39,
     "name": "Gerätekraftwagen",
     "short_name": "GKW",
@@ -1035,8 +1035,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 40,
     "name": "MTW-TZ",
     "short_name": "MTW-TZ",
@@ -1060,8 +1060,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 41,
     "name": "Mehrzweckkraftwagen",
     "short_name": "MzKW",
@@ -1083,8 +1083,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 42,
     "name": "Lastkraftwagen-Kipper 9 t",
     "short_name": "LKW K9",
@@ -1108,8 +1108,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 43,
     "name": "Radlader groß",
     "short_name": "BRmG R",
@@ -1133,8 +1133,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 44,
     "name": "Anhänger Drucklufterzeugung",
     "short_name": "Anh. DLE",
@@ -1158,8 +1158,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 45,
     "name": "Mannschaftslastwagen Typ V",
     "short_name": "MLW 5",
@@ -1180,8 +1180,8 @@
     "prerequisites": {
       "thw": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 46,
     "name": "Wechselladerfahrzeug",
     "short_name": "WLF",
@@ -1202,8 +1202,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 47,
     "name": "Abrollbehälter-Rüst",
     "short_name": "AB-Rüst",
@@ -1228,8 +1228,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 48,
     "name": "AB-Atemschutz",
     "short_name": "AB-A",
@@ -1254,8 +1254,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 49,
     "name": "AB-Öl",
     "short_name": "AB-Öl",
@@ -1280,8 +1280,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 50,
     "name": "Gruppenkraftwagen",
     "short_name": "GruKw",
@@ -1302,8 +1302,8 @@
     "prerequisites": {
       "bereitschaftspolizei": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 51,
     "name": "Führungskraftwagen",
     "short_name": "FüKw",
@@ -1330,8 +1330,8 @@
       "sek": 1,
       "mek": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 52,
     "name": "Gefangenenkraftwagen",
     "short_name": "GefKw",
@@ -1355,8 +1355,8 @@
     "prerequisites": {
       "bereitschaftspolizei": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 53,
     "name": "Dekon-P",
     "short_name": "Dekon-P",
@@ -1381,8 +1381,8 @@
     "prerequisites": {
       "fire_stations": 14
     }
-  }],
-  [{
+  },
+  {
     "id": 54,
     "name": "AB-Dekon-P",
     "short_name": "AB-Dekon-P",
@@ -1408,8 +1408,8 @@
     "prerequisites": {
       "fire_stations": 14
     }
-  }],
-  [{
+  },
+  {
     "id": 55,
     "name": "Kommandowagen - für den LNA",
     "short_name": "KdoW-LNA",
@@ -1431,8 +1431,8 @@
       "rescue_stations": 5,
       "patient_min": 5
     }
-  }],
-  [{
+  },
+  {
     "id": 56,
     "name": "Kommandowagen - für den OrgL",
     "short_name": "KdoW-OrgL",
@@ -1454,8 +1454,8 @@
       "rescue_stations": 5,
       "patient_min": 10
     }
-  }],
-  [{
+  },
+  {
     "id": 57,
     "name": "Feuerwehrkran",
     "short_name": "FwK",
@@ -1480,8 +1480,8 @@
     "prerequisites": {
       "fire_stations": 14
     }
-  }],
-  [{
+  },
+  {
     "id": 58,
     "name": "Krankentransportwagen",
     "short_name": "KTW Typ B",
@@ -1510,8 +1510,8 @@
       "rescue_stations": 3,
       "seg": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 59,
     "name": "Einsatzleitwagen",
     "short_name": "ELW 1 (SEG)",
@@ -1537,8 +1537,8 @@
       "rescue_stations": 3,
       "seg": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 60,
     "name": "Gerätewagen Sanität",
     "short_name": "GW-SAN",
@@ -1567,8 +1567,8 @@
         "Sanitätsdienst"
       ]
     }
-  }],
-  [{
+  },
+  {
     "id": 61,
     "name": "Polizeihubschrauber",
     "short_name": "Pol-Heli",
@@ -1593,8 +1593,8 @@
     "prerequisites": {
       "police_helicopter_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 62,
     "name": "Abrollbehälter-Schlauch",
     "short_name": "AB-Schlauch",
@@ -1620,8 +1620,8 @@
     "prerequisites": {
       "fire_stations": 7
     }
-  }],
-  [{
+  },
+  {
     "id": 63,
     "name": "Gerätewagen Taucher",
     "short_name": "GW-Taucher",
@@ -1647,8 +1647,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 64,
     "name": "Gerätewagen Wasserrettung",
     "short_name": "GW-Wasserrettung",
@@ -1670,8 +1670,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 65,
     "name": "LKW-Kipper, 7 t, geländegängig",
     "short_name": "LKW 7 Lkr 19 tm",
@@ -1691,8 +1691,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 66,
     "name": "Mehrzweckboot (MzB) auf Transporthänger",
     "short_name": "Anh MzB",
@@ -1716,8 +1716,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 67,
     "name": "Schlauchboot 1 t auf Transporthänger",
     "short_name": "Anh SchlB",
@@ -1741,8 +1741,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 68,
     "name": "Mehrzweckarbeitsboot mit Bugklappe auf Transport-Anhänger",
     "short_name": "Anh MzAB",
@@ -1766,8 +1766,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 69,
     "name": "Tauchkraftwagen",
     "short_name": "TKW",
@@ -1791,8 +1791,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 70,
     "name": "Mehrzweckboot",
     "short_name": "MZB",
@@ -1818,8 +1818,8 @@
     "prerequisites": {
       "wasserrettung": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 71,
     "name": "Abrollbehälter-Mehrzweckboot",
     "short_name": "AB-MZB",
@@ -1845,8 +1845,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 72,
     "name": "Wasserwerfer 1000",
     "short_name": "WaWe 10",
@@ -1870,8 +1870,8 @@
     "prerequisites": {
       "bereitschaftspolizei": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 73,
     "name": "Großraum-Rettungstransportwagen",
     "short_name": "GRTW",
@@ -1910,8 +1910,8 @@
         "normal": 20
       }
     }
-  }],
-  [{
+  },
+  {
     "id": 74,
     "name": "Notarztwagen",
     "short_name": "NAW",
@@ -1942,8 +1942,8 @@
     "prerequisites": {
       "rescue_stations": 3
     }
-  }],
-  [{
+  },
+  {
     "id": 75,
     "name": "Flugfeldlöschfahrzeug",
     "short_name": "FLF",
@@ -1968,8 +1968,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 76,
     "name": "Rettungstreppe",
     "short_name": "RTF",
@@ -1993,8 +1993,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 77,
     "name": "Abrollbehälter-Gefahrgut",
     "short_name": "AB-Gefahrgut",
@@ -2020,8 +2020,8 @@
     "prerequisites": {
       "fire_stations": 11
     }
-  }],
-  [{
+  },
+  {
     "id": 78,
     "name": "AB-Einsatzleitung",
     "short_name": "AB-EL",
@@ -2049,8 +2049,8 @@
     "prerequisites": {
       "fire_stations": 13
     }
-  }],
-  [{
+  },
+  {
     "id": 79,
     "name": "SEK - Zivilfahrzeug",
     "short_name": "SEK - ZF",
@@ -2077,8 +2077,8 @@
     "prerequisites": {
       "sek": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 80,
     "name": "SEK - Mannschaftstransportfahrzeug",
     "short_name": "SEK - MTF",
@@ -2105,8 +2105,8 @@
     "prerequisites": {
       "sek": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 81,
     "name": "MEK - Zivilfahrzeug",
     "short_name": "MEK - ZF",
@@ -2133,8 +2133,8 @@
     "prerequisites": {
       "mek": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 82,
     "name": "MEK - Mannschaftstransportfahrzeug",
     "short_name": "MEK - MTF",
@@ -2161,8 +2161,8 @@
     "prerequisites": {
       "mek": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 83,
     "name": "GW-Werkfeuerwehr",
     "short_name": "GW-Werk",
@@ -2186,8 +2186,8 @@
     "prerequisites": {
       "werkfeuerwehr": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 84,
     "name": "ULF mit Löscharm",
     "short_name": "ULF-Löscharm",
@@ -2212,8 +2212,8 @@
     "prerequisites": {
       "werkfeuerwehr": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 85,
     "name": "Teleskopmast 50",
     "short_name": "TM 50",
@@ -2239,8 +2239,8 @@
     "prerequisites": {
       "werkfeuerwehr": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 86,
     "name": "Turbolöscher",
     "short_name": "Turbolöscher",
@@ -2264,8 +2264,8 @@
     "prerequisites": {
       "werkfeuerwehr": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 87,
     "name": "TLF 4000",
     "short_name": "TLF 4000",
@@ -2290,8 +2290,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 88,
     "name": "Kleinlöschfahrzeug",
     "short_name": "KLF",
@@ -2316,8 +2316,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 89,
     "name": "Mittleres Löschfahrzeug",
     "short_name": "MLF",
@@ -2342,8 +2342,8 @@
     "prerequisites": {
       "fire_stations": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 90,
     "name": "HLF 10",
     "short_name": "HLF 10",
@@ -2371,8 +2371,8 @@
       "fire_stations": 1,
       "rank": "Gruppenführer(in)"
     }
-  }],
-  [{
+  },
+  {
     "id": 91,
     "name": "Rettungshundefahrzeug",
     "short_name": "MTF-Hund",
@@ -2397,8 +2397,8 @@
     "prerequisites": {
       "rescue_dog_units": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 92,
     "name": "Anhänger Hundetransport",
     "short_name": "Anh Hund",
@@ -2423,8 +2423,8 @@
     "prerequisites": {
       "rescue_dog_units": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 93,
     "name": "Mannschaftstransportwagen Ortsverband",
     "short_name": "MTW-OV",
@@ -2442,8 +2442,8 @@
     "prerequisites": {
       "rescue_dog_units": 1
     }
-  }],
-  [{
+  },
+  {
     "id": 94,
     "name": "Diensthundeführerkraftwagen",
     "short_name": "DHuFüKw",
@@ -2465,4 +2465,5 @@
     "prerequisites": {
       "k9": 1
     }
-  }]
+  }
+]
