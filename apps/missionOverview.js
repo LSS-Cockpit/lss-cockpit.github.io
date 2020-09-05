@@ -1,5 +1,5 @@
-var aMissions = await loadMissions();
-var aVehicleTypes = await loadVehicleTypes();
+var aMissions = await loadApi("missions");
+var aVehicleTypes = await loadApi("vehicleTypes");
 var missionId = window.location.pathname.replace(/\D+/g,"");
 var missionTypeId = document.getElementById("mission_help").pathname ? document.getElementById("mission_help").pathname.replace(/\D+/g,"") : "VGE";
 var missionPatients = document.getElementsByClassName("mission_patient").length;
