@@ -32,6 +32,7 @@ lsscAppStoreLabel.innerHTML = `<div class="label label-default">LSS-Cockpit</div
 document.getElementById("lsscAppStore").insertAfter(lsscAppStoreLabel);
 
 for(var app of apps){
+    console.log(app);
     var hashtags = "";
     for(var hashtag of app.hashtags){
         hashtags += `<div class="label label-default">#${hashtag}</div> `;
