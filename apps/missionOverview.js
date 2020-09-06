@@ -1,79 +1,126 @@
+await loadCss("https://quizzical-curran-b45735.netlify.app/css/common.css");
 var aMissions = await loadApi("missions");
 var aVehicleTypes = await loadApi("vehicleTypes");
-var missionId = window.location.pathname.replace(/\D+/g,"");
-var missionTypeId = document.getElementById("mission_help").pathname ? document.getElementById("mission_help").pathname.replace(/\D+/g,"") : "VGE";
+var missionId = await getMissionId();
+var missionTypeId = await getMissionTypeId();
 var missionPatients = document.getElementsByClassName("mission_patient").length;
-var insertAlert = document.createElement("div");
-insertAlert.classList = "alert alert-danger";
+var missionInfos = {};
 
-if(isNaN(missionTypeId)) {
-    insertAlert.innerHMTL = "<button class='close' data-dismiss='alert' type='button'>×</button>Bei diesem Einsatz handelt es sich um einen selbst erstellten Verbandgroßeinsatz.";
-} else {
+function createAlert(missionData) {
+    var $mData = missionData;
+    var spanBadge = "<span class='badge badge-light'>%placeholder%</span> ";
+    var insertAlert = document.createElement("div");
+    insertAlert.classList = "alert alert-danger";
+    insertAlert.id = "alrtMissionOverview";
+    if(missionTypeId === -1) missionTypeId = "VGE";
+    var alertText = "";
+
+    if($mData.vge) {
+        alertText += $mData.text;
+    } else {
+        if($mData.guardMission) alertText += spanBadge.replace("%placeholder%", "Sicherheitswache");
+        if($mData.poi) spanBadge.replace("%placeholder%", $mData.poi);
+        alertText += spanBadge.replace("%placeholder%", (($mData.guardMission || $mData.requirements.length == 0) ? "Ø " : "") + $mData.credits.toLocaleString() + " Credits");
+        if(missionPatients > 0) alertText += spanBadge.replace("%placeholder%", missionPatients + (missionPatients == 1 ? " Patient" : " Patienten"));
+        if($mData.minPat || $mData.maxPat) {
+            if($mData.minPat == $mData.maxPat) alertText += spanBadge.replace("%placeholder%", $mData.minPat + ($mData.minPat == 1 ? " Patient" : " Patienten"));
+            else alertText += spanBadge.replace("%placeholder%", $mData.minPat + " bis " + $mData.maxPat + " Patienten");
+        }
+        if($mData.hospital) alertText += spanBadge.replace("%placeholder%", $mData.hospital);
+        if($mData.prisoners) alertText += spanBadge.replace("%placeholder%", "max. " + $mData.prisoners + ($mData.prisoners == 1 ? " Gefangener" : " Gefangene"));
+        if($mData.firemen) alertText += spanBadge.replace("%placeholder%", "min. " + $mData.firemen + " Feuerwehrleute");
+        if($mData.policemen) alertText += spanBadge.replace("%placeholder%", "min. " + $mData.policemen + " Polizisten");
+        alertText += "<br><br><span class='lsscHide'>";
+        if(missionPatients > 0 || $mData.minPat || $mData.maxPat) {
+            if($mData.chanceTrsp) alertText += "Transport: " + $mData.chanceTrsp + "%";
+            if($mData.chanceCarry) alertText += ", Tragehilfe: " + $mData.chanceCarry + "%";
+            if($mData.chanceNef) alertText += ", NEF: " + $mData.chanceNef + "%";
+            if($mData.chanceRth) alertText += ", RTH: " + $mData.chanceRth + "%";
+            alertText += "<br><br>";
+        }
+        var i;
+        if($mData.requirements.length > 0) {
+            for(i in $mData.requirements) {
+                alertText += $mData.requirements[i].key + "x " + $mData.requirements[i].item + "<br>";
+            }
+        } else {
+            alertText += "<small>Dies ist ein reiner Rettungsdienst-Einsatz. Hier bekommt man nur für die Behandlung oder den Transport Credits.</small><br>";
+        }
+        if($mData.expansions.length > 0) {
+            alertText += "<br>mögliche Ausbreitungen:<br>";
+            for(i in $mData.expansions) {
+                alertText += spanBadge.replace("%placeholder%", $mData.expansions[i]);
+            }
+        }
+        if($mData.followup.length > 0) {
+            alertText += "<br>Mögliche Folgeeinsätze:<br>";
+            for(i in $mData.followup) {
+                alertText += spanBadge.replace("%placeholder%", $mData.followup[i]);
+            }
+        }
+        alertText += "<br><small>Einsatznummer: " + missionTypeId + "-" + missionId + "</small></span>";
+    }
+
+    insertAlert.innerHTML = "<button class='close' data-dismiss='alert' type='button'>×</button>" + alertText;
+    //document.getElementById("mission_general_info").insertAfter(insertAlert);
+    $("#mission_general_info").parent().after(insertAlert);
+}
+
+if(missionTypeId >= 0) {
     var mission = aMissions.filter((obj) => obj.id == missionTypeId)[0];
     if(mission.average_credits === null) mission.average_credits = 0;
-    var alertText = "Einsatznummer: " + missionId + ", Einsatztyp: " + missionTypeId + "<br>";
-    if(mission.place !== null) {
-        alertText += "<span class='badge badge-light'>" + mission.place + "</span> <span class='badge badge-light'>Ø "+ mission.average_credits.toLocaleString() + " Credits</span>";
-    } else {
-        alertText += " <span class='badge badge-light'>Ø " + mission.average_credits.toLocaleString() + " Credits</span>";
+    missionInfos.name = mission.name;
+    missionInfos.credits = mission.average_credits;
+    missionInfos.requirements = [];
+    missionInfos.expansions = [];
+    missionInfos.followup = [];
+    if(mission.additional.guard_mission === true) {
+        missionInfos.guardMission = true;
+        missionInfos.credits = +document.getElementById("col_left").innerText.match(/(?:Verdienst:)\s([\d.]+)/g)[0].replace(/\D+/g,"");
     }
-    if(mission.additional.max_possible_prisoners) {
-        alertText += " <span class='badge badge-light'> max. " + mission.additional.max_possible_prisoners + " Gefangene</span>";
-    }
-    if(mission.additional.average_min_fire_personnel) {
-        alertText += " <span class='badge badge-light'>min. " + mission.additional.average_min_fire_personnel + " Feuerwehrleute</span>";
-    }
-    if(mission.additional.average_min_police_personnel) {
-        alertText += " <span class='badge badge-light'>min. " + mission.additional.average_min_police_personnel + " Polizisten</span>";
-    }
+    if(mission.place !== null) missionInfos.poi = mission.place;
+    if(mission.additional.max_possible_prisoners) missionInfos.prisoners = mission.additional.max_possible_prisoners;
+    if(mission.additional.average_min_fire_personnel) missionInfos.firemen = mission.additional.average_min_fire_personnel;
+    if(mission.additional.average_min_police_personnel) missionInfos.policemen = mission.additional.average_min_police_personnel;
     if(mission.additional.possible_patient_min || mission.additional.possible_patient) {
-        if(mission.additional.possible_patient_min === undefined) mission.additional.possible_patient_min = 0;
-        var textPatients = missionPatients > 0 ? (missionPatients + " Patienten") : (mission.additional.possible_patient_min + " bis " + mission.additional.possible_patient + " Patienten");
-        if(missionPatients == 0 && mission.additional.possible_patient_min == mission.additional.possible_patient) {
-            textPatients = mission.additional.possible_patient_min + " Patienten";
+        if(missionPatients == 0) {
+            missionInfos.minPat = mission.additional.possible_patient_min ? mission.additional.possible_patient_min : 0;
+            missionInfos.maxPat = mission.additional.possible_patient;
         }
-        alertText += " <span class='badge badge-light'>" + textPatients + "</span> <span class='badge badge-light'>" + mission.additional.patient_specializations + "</span><br><br>";
-        if(mission.chances.patient_transport === undefined) mission.chances.patient_transport = 30;
-        alertText += "Transport: " + mission.chances.patient_transport + "%";
-        if(mission.chances.patient_other_treatment !== undefined) {
-            alertText += ", Tragehilfe: " + mission.chances.patient_other_treatment + "%";
-        }
-        if(mission.chances.nef !== undefined) {
-            alertText += ", NEF: " + mission.chances.nef + "%";
-        }
-        if(mission.chances.helicopter !== undefined) {
-            alertText += ", RTH: " + mission.chances.helicopter + "%";
-        }
+        missionInfos.hospital = mission.additional.patient_specializations;
+        if(mission.chances.patient_transport === undefined) missionInfos.chanceTrsp = 30;
+        else missionInfos.chanceTrsp = mission.chances.patient_transport;
+        if(mission.chances.patient_other_treatment !== undefined) missionInfos.chanceCarry = mission.chances.patient_other_treatment;
+        if(mission.chances.nef !== undefined) missionInfos.chanceNef = mission.chances.nef;
+        if(mission.chances.helicopter !== undefined) missionInfos.chanceRth = mission.chances.helicopter;
     }
-    alertText += "<br><br>";
-    if(mission.average_credits === 0) {
-        alertText += "<small>Dies ist ein reiner Rettungsdienst-Einsatz. Hier verdient man nur an Behandlung/ Transport des Patienten.</small>"
-    }
-    for(var key in mission.requirements) {
+    var key;
+    for(key in mission.requirements) {
         if(key !== "water_needed") {
             var classAlias = aVehicleTypes.filter((obj) => obj.class[0] == key)[0].class_alias[0];
-            alertText += mission.requirements[key] + "x " + classAlias + (mission.chances[key] ? " (" + mission.chances[key] + "%)<br>" : "<br>");
+            missionInfos.requirements.push({"key":mission.requirements[key],"item":classAlias});
         } else {
-            alertText += mission.requirements[key].toLocaleString() + " Liter Wasser<br>";
+            missionInfos.requirements.push({"key":mission.requirements[key],"item":"Liter Wasser"});
         }
     }
-    var idx;
     if(mission.additional.expansion_missions_ids) {
-        alertText += "<br>mögliche Ausbreitungen:<br>";
-        for(idx in mission.additional.expansion_missions_ids) {
-            var e = mission.additional.expansion_missions_ids[idx];
-            alertText += "<span class='badge badge-light'>" + aMissions.filter((obj) => obj.id == e)[0].name + "</span> ";
+        for(key in mission.additional.expansion_missions_ids) {
+            var e = mission.additional.expansion_missions_ids[key];
+            missionInfos.expansions.push(aMissions.filter((obj) => obj.id == e)[0].name);
         }
     }
     if(mission.additional.followup_missions_ids) {
-        alertText += "<br>mögliche Folgeeinsätze:<br>";
-        for(idx in mission.additional.followup_missions_ids) {
-            var f = mission.additional.followup_missions_ids[idx];
-            alertText += "<span class='badge badge-light'>" + aMissions.filter((obj) => obj.id == f)[0].name + "</span> ";
+        for(key in mission.additional.followup_missions_ids) {
+            var f = mission.additional.followup_missions_ids[key];
+            missionInfos.followup.push(aMissions.filter((obj) => obj.id == f)[0].name);
         }
     }
-    insertAlert.innerHTML = "<button class='close' data-dismiss='alert' type='button'>×</button>" + alertText;
+} else {
+    missionInfos.vge = true;
+    missionInfos.text = "Bei diesem Einsatz handelt es sich um einen selbst erstellten Verbandgroßeinsatz.";
 }
+createAlert(missionInfos);
 
-//document.getElementById("mission_general_info").insertAfter(insertAlert);
-$("#mission_general_info").parent().after(insertAlert);
+document.getElementById("alrtMissionOverview").onclick = function(e) {
+    document.getElementsByClassName("lsscHide")[0].classList.toggle("lsscShow");
+}
