@@ -5,7 +5,12 @@ var apps = [{
     "name":"missionOverview",
     "version":"1.0.0",
     "description":"Im MissionOverview werden dir die Fahrzeug-Anforderungen des Einsatzes angezeigt.",
-    "hashtags":["einsaetze","fahrzeuge"]
+    "hashtags":["einsatz","fahrzeug"]
+},{
+    "name":"JustInTime",
+    "version":"1.0.0",
+    "description":"Schaffe ich es noch den Einsatz vor Ablauf der ablaufenden Zeit zu erreichen? Das sagt dir JustInTime.",
+    "hashtags":["einsatz","fahrzeug"]
 }];
 
 document.getElementById("main_navbar").style.cssText = "margin-bottom: 0px; border-bottom: 0px";
