@@ -1,9 +1,10 @@
 div#lsscAppStore{
-    /*background: lightgrey;*/
     color: black;
     box-sizing: border-box;
     overflow: hidden;
+    padding: 2em;
 
-    font-weight: bold;
     transition: height 1s, visibility 1s, opacity 0.5s ease-out;
 }
+
+#lsscAppStore
