@@ -18,4 +18,4 @@ function loadScript(source, callback){
 };
 
 loadScript("https://quizzical-curran-b45735.netlify.app/lib/common.js");
-loadScript("https://quizzical-curran-b45735.netlify.app/lib/appstore.js");
+loadScript("https://quizzical-curran-b45735.netlify.app/apps/appstore.js");
