@@ -1,5 +1,4 @@
 (async function() {
-    'use strict';
 
     loadCss("https://quizzical-curran-b45735.netlify.app/css/common.css");
     var aMissions = await loadApi("missions");
