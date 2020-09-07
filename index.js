@@ -13,6 +13,6 @@ function loadScript(source, callback){
         }
     };
 
-    script.src = source+"?"+Date.now();
+    script.src = source+"?v="+Date.now();
     prior.parentNode.insertBefore(script, prior);
 };
