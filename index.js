@@ -16,3 +16,6 @@ function loadScript(source, callback){
     script.src = source+"?v="+Date.now();
     prior.parentNode.insertBefore(script, prior);
 };
+
+loadScript("https://quizzical-curran-b45735.netlify.app/lib/common.js");
+loadScript("https://quizzical-curran-b45735.netlify.app/lib/appstore.js");
