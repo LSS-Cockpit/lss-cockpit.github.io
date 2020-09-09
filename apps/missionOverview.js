@@ -21,7 +21,7 @@
             alertText += $mData.text;
         } else {
             if($mData.guardMission) alertText += spanBadge.replace("%placeholder%", "Sicherheitswache");
-            if($mData.poi) spanBadge.replace("%placeholder%", $mData.poi);
+            if($mData.poi) alertText += spanBadge.replace("%placeholder%", $mData.poi);
             alertText += spanBadge.replace("%placeholder%", (($mData.guardMission || $mData.requirements.length == 0) ? "Ø " : "") + $mData.credits.toLocaleString() + " Credits");
             if(missionPatients > 0) alertText += spanBadge.replace("%placeholder%", missionPatients + (missionPatients == 1 ? " Patient" : " Patienten"));
             if($mData.minPat || $mData.maxPat) {
