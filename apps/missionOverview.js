@@ -22,7 +22,7 @@
         } else {
             if($mData.guardMission) alertText += spanBadge.replace("%placeholder%", "Sicherheitswache");
             if($mData.poi) alertText += spanBadge.replace("%placeholder%", $mData.poi);
-            alertText += spanBadge.replace("%placeholder%", (($mData.guardMission || $mData.requirements.length == 0) ? "Ø " : "") + $mData.credits.toLocaleString() + " Credits");
+            alertText += spanBadge.replace("%placeholder%", ((!$mData.guardMission && $mData.requirements.length > 0) ? "Ø " : "") + $mData.credits.toLocaleString() + " Credits");
             if(missionPatients > 0) alertText += spanBadge.replace("%placeholder%", missionPatients + (missionPatients == 1 ? " Patient" : " Patienten"));
             if($mData.minPat || $mData.maxPat) {
                 if($mData.minPat == $mData.maxPat) alertText += spanBadge.replace("%placeholder%", $mData.minPat + ($mData.minPat == 1 ? " Patient" : " Patienten"));
@@ -43,7 +43,8 @@
             var i;
             if($mData.requirements.length > 0) {
                 for(i in $mData.requirements) {
-                    alertText += $mData.requirements[i].key + "x " + $mData.requirements[i].item + "<br>";
+                    var e = $mData.requirements[i];
+                    alertText += e.key.toLocaleString() + " " + e.item + ($mData.chances[e.item] ? (" (" + $mData.chances[e.item] + "%)<br>") : "<br>");
                 }
             } else {
                 alertText += "<small>Dies ist ein reiner Rettungsdienst-Einsatz. Hier bekommt man nur für die Behandlung oder den Transport Credits.</small><br>";
@@ -73,6 +74,7 @@
         if(mission.average_credits === null) mission.average_credits = 0;
         missionInfos.name = mission.name;
         missionInfos.credits = mission.average_credits;
+        missionInfos.chances = {};
         missionInfos.requirements = [];
         missionInfos.expansions = [];
         missionInfos.followup = [];
@@ -101,6 +103,9 @@
             if(key !== "water_needed") {
                 var classAlias = aVehicleTypes.filter((obj) => obj.class[0] == key)[0].class_alias[0];
                 missionInfos.requirements.push({"key":mission.requirements[key],"item":classAlias});
+                if(mission.chances[key]) {
+                    missionInfos.chances[classAlias] = mission.chances[key];
+                }
             } else {
                 missionInfos.requirements.push({"key":mission.requirements[key],"item":"Liter Wasser"});
             }
