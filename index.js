@@ -1,17 +1,21 @@
 console.log("Welcome to LSS-Cockpit!");
 
-var lsscAppStore = document.createElement("div");
-lsscAppStore.setAttribute("id","lsscAppStore");
-lsscAppStore.innerText = "Tescht";
-document.getElementById("main_navbar").insertAfter(lsscAppStore);
+function loadScript(source, callback){
+    var script = document.createElement('script');
+    var prior = document.getElementsByTagName('script')[0];
+    script.async = 1;
 
-var lsscAppStoreLabel = document.createElement("div");
-lsscAppStoreLabel.setAttribute("id","lsscAppStoreLabel");
-lsscAppStoreLabel.innerHTML = `<div class="label label-default pull-right" style="margin: -2em 3em 0 0">LSS-Cockpit</div>`;
-document.getElementById("lsscAppStore").insertAfter(lsscAppStoreLabel);
+    script.onload = script.onreadystatechange = (_, isAbort) => {
+        if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
+            script.onload = script.onreadystatechange = null;
+            script = undefined;
+            if (!isAbort) if (callback) callback();
+        }
+    };
 
-document.getElementById("lsscAppStoreLabel").addEventListener("click", function(){
-    var appStore = document.getElementById("lsscAppStore");
-    if(appStore.innerHeight > 0) appStore.slideUp();
-    else appStore.slideDown();
-});
+    script.src = source+"?v="+Date.now();
+    prior.parentNode.insertBefore(script, prior);
+};
+
+loadScript("https://quizzical-curran-b45735.netlify.app/lib/common.js");
+loadScript("https://quizzical-curran-b45735.netlify.app/apps/appstore.js");
