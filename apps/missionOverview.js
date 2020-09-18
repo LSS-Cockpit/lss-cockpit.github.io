@@ -32,7 +32,7 @@
             if($mData.prisoners) alertText += spanBadge.replace("%placeholder%", "max. " + $mData.prisoners + ($mData.prisoners == 1 ? " Gefangener" : " Gefangene"));
             if($mData.firemen) alertText += spanBadge.replace("%placeholder%", "min. " + $mData.firemen + " Feuerwehrleute");
             if($mData.policemen) alertText += spanBadge.replace("%placeholder%", "min. " + $mData.policemen + " Polizisten");
-            alertText += "<br><br><span class='lsscHide'>";
+            alertText += "<span class='lsscHide'><br><br>";
             if(missionPatients > 0 || $mData.minPat || $mData.maxPat) {
                 if($mData.chanceTrsp) alertText += "Transport: " + $mData.chanceTrsp + "%";
                 if($mData.chanceCarry) alertText += ", Tragehilfe: " + $mData.chanceCarry + "%";
