@@ -19,14 +19,19 @@
             alertVehicles.push({"key":e,"item":item});
         }
 
-        for(var i in alertVehicles) {
-            var vKey = alertVehicles[i].key.toLocaleString();
-            var vItem = alertVehicles[i].item;
-            if(i+1 == alertVehicles.length) {
-                alertText += vKey + " " + vItem;
-            } else {
-                alertText += vKey + " " + vItem + ", ";
+        if(alertVehicles.length > 0) {
+            alertText += "Fehlende Fahrzeuge:<br>";
+            for(var i in alertVehicles) {
+                var vKey = alertVehicles[i].key.toLocaleString();
+                var vItem = alertVehicles[i].item;
+                if(i != alertVehicles.length-1) {
+                    alertText += vKey + " " + vItem + ", ";
+                } else {
+                    alertText += vKey + " " + vItem + ". ";
+                }
             }
+        } else {
+            alertText += "Alle fehlenden Fahrzeuge auf Anfahrt.";
         }
 
         insertAlert.innerHTML = alertText;
