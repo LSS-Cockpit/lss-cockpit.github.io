@@ -1292,6 +1292,7 @@
     "class_alias": [
       "GruKw"
     ],
+    "cost": 10000,
     "personal": {
       "min": 1,
       "max": 9
