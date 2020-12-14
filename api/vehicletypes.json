@@ -2497,5 +2497,30 @@
     "prerequisites": {
       "police_stations": 1
     }
+  },
+  {
+    "id": 96,
+    "name": "Außenlastbehälter (allgemein)",
+    "short_name": "Außenlastbehälter",
+    "class": [
+      "helicopter_bucket"
+    ],
+    "class_alias": [
+      "Außenlastbehälter"
+    ],
+    "cost": 50000,
+    "personal": {
+      "min": 0,
+      "max": 0
+    },
+    "building": [
+      13
+    ],
+    "additional": {
+      "qualification": "Brandbekämpfung"
+    },
+    "prerequisites": {
+      "police_helicopter_stations": 1
+    }
   }
 ]
