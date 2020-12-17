@@ -2518,6 +2518,7 @@
     ],
     "additional": {
       "trailer": true,
+      "water": 1000,
       "qualification": "Brandbekämpfung"
     },
     "prerequisites": {
