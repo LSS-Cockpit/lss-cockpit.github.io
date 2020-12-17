@@ -2517,6 +2517,7 @@
       13
     ],
     "additional": {
+      "trailer": true,
       "qualification": "Brandbekämpfung"
     },
     "prerequisites": {
