@@ -723,7 +723,7 @@
       "ambulances"
     ],
     "class_alias": [
-      "Rettungstransport"
+      "Patiententransport"
     ],
     "cost": 5000,
     "personal": {
@@ -845,7 +845,7 @@
       "police_cars"
     ],
     "class_alias": [
-      "FuStW"
+      "Polizeistreifen"
     ],
     "cost": 5000,
     "personal": {
@@ -992,8 +992,12 @@
     "id": 38,
     "name": "Krankentransportwagen",
     "short_name": "KTW",
-    "class": [],
-    "class_alias": [],
+    "class": [
+      "ambulances"
+    ],
+    "class_alias": [
+      "Patiententransport"
+    ],
     "cost": 5000,
     "personal": {
       "min": 1,
@@ -1485,13 +1489,13 @@
   },
   {
     "id": 58,
-    "name": "Krankentransportwagen",
+    "name": "Krankentransportwagen Typ B",
     "short_name": "KTW Typ B",
     "class": [
       "ambulances"
     ],
     "class_alias": [
-      "Rettungstransport"
+      "Patiententransport"
     ],
     "cost": 5000,
     "personal": {
@@ -1515,7 +1519,7 @@
   },
   {
     "id": 59,
-    "name": "Einsatzleitwagen",
+    "name": "Einsatzleitwagen (SEG)",
     "short_name": "ELW 1 (SEG)",
     "class": [
       "seg_elw"
@@ -1881,7 +1885,7 @@
       "ambulances"
     ],
     "class_alias": [
-      "Rettungstransport"
+      "Patiententransport"
     ],
     "cost": 25000,
     "personal": {
@@ -1922,7 +1926,7 @@
       "nef"
     ],
     "class_alias": [
-      "Rettungstransport",
+      "Patiententransport",
       "Notarzt"
     ],
     "cost": 25000,
@@ -2480,7 +2484,7 @@
       "police_cars"
     ],
     "class_alias": [
-      "FuStW"
+      "Polizeistreifen"
     ],
     "cost": 3000,
     "personal": {
@@ -2517,12 +2521,45 @@
       13
     ],
     "additional": {
+      "qualification": "Brandbekämpfung",
       "trailer": true,
-      "water": 1000,
-      "qualification": "Brandbekämpfung"
+      "water": 1000
     },
     "prerequisites": {
       "police_helicopter_stations": 1
+    }
+  },
+  {
+    "id": 97,
+    "name": "Intensivtransportwagen",
+    "short_name": "ITW",
+    "class": [
+      "ambulances",
+      "nef"
+    ],
+    "class_alias": [
+      "Patiententransport",
+      "Notarzt"
+    ],
+    "cost": 30000,
+    "personal": {
+      "min": 3,
+      "max": 3
+    },
+    "building": [
+      0,
+      2,
+      20
+    ],
+    "additional": {
+      "critical_patients": true,
+      "primary_transport": true,
+      "secondary_transport": true,
+      "qualification": "Intensivpflege",
+      "special_conditions": true
+    },
+    "prerequisites": {
+      "rescue_stations": 1
     }
   }
 ]
